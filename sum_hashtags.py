@@ -16,9 +16,9 @@ def sum_ht(ht_dir, out_fn):
         except IOError as e:
             print e
         hashtag_dict[f] = count        
-    sorted_ls = an_util.sort_dict(hashtag_dict)
-    an_util.write_tup_ls(sorted_ls, out_fn)
+    sorted_ls = util.sort_dict(hashtag_dict)
+    util.write_tup_ls(sorted_ls, out_fn)
 
 if __name__ == '__main__':
-    ht_dir, out_fn = an_util.check_input(sys.argv, 2, "")
+    ht_dir, out_fn = util.check_input(sys.argv, 2, "")
     sum_ht(ht_dir, out_fn)

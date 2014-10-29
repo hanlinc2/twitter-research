@@ -128,8 +128,8 @@ if __name__ == "__main__":
 	"""The main program"""
 	orig_file, rt_file, directory, dest_dir = util.check_input(
 		sys.argv, 4, "")
-	user_set = an_util.load_usrs_csv(orig_file)
-	user_set = user_set.union(an_util.load_usrs_csv(rt_file))
+	user_set = util.load_usrs_csv(orig_file)
+	user_set = user_set.union(util.load_usrs_csv(rt_file))
 	print "number of users original & retweet users", len(user_set)
 	file_ls = get_sorted_file_ls(directory)
 	dates = get_dates(file_ls)
